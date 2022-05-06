@@ -19,6 +19,7 @@ public class T4_LibraryLoginPage {
 
         //3. Enter username: “incorrect@email.com”
         WebElement usernameInput = driver.findElement(By.className("form-control"));
+        //İLK FORM-CONTROL WEB ELEMENTİ BULDUĞU İÇİN CLASSNAME İ TERCİH ETTİ
         usernameInput.sendKeys("incorrect@email.com");
 
         //4. Enter password: “incorrect password”
@@ -27,6 +28,7 @@ public class T4_LibraryLoginPage {
 
         //5. Click to Sign in button
         WebElement signInButton = driver.findElement(By.tagName("button"));
+        //İLGİLİ SAYFADA SADECE 1 BUTON OLDUĞU İÇİN TAGNAME KULLANDI. BİRDEN FAZLA BUTON OLASYDDI FARKLI BİŞEY KULLANIRDIK
         signInButton.click();
 
         //6. Verify: visually “Sorry, Wrong Email or Password”

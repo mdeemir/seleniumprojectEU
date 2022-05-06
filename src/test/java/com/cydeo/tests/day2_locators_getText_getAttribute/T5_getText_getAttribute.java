@@ -35,19 +35,20 @@ public class T5_getText_getAttribute {
         // name attribute has "firstname" value
         //WebElement firstNameInput = driver.findElement(By.name("firstname"));
         WebElement firstNameInput = driver.findElement(By.className("form-control"));
-
+// WebElement firstNameInput = driver.findElement(By.name("first name")); yazabilirdik. burada elementi seciyoruz belirliyoruz önce
+// BURADAKİ NAME İSE KUTUCUGUN SOLUNDAKİ SABİT FİRST NAME YAZAN YER
         //5- Verify placeholder attribute’s value is as expected:
         // Expected: first name
         String expectedPlaceHolder = "first name";
         String actualPlaceHolder = firstNameInput.getAttribute("placeholder");
-
+//PLACE HOLDER KUTUCUK İÇİNDE YAZAN KISIM BİŞEY YAZINCA KAYBOLAN
         if (actualPlaceHolder.equals(expectedPlaceHolder)){
             System.out.println("Placeholder text verification PASSED!");
         }else{
             System.out.println("Placeholder text verification FAILED!!!");
         }
 
-        driver.close();
+        driver.close();//EN SON BROWSERI KAPATIR
 
     }
 
