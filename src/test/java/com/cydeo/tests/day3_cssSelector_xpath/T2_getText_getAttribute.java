@@ -41,7 +41,7 @@ public class T2_getText_getAttribute {
         }else {
             System.out.println("actualForgotPasswordLinkText = " + actualForgotPasswordLinkText);
             System.out.println("expectedForgotPasswordLinkText = " + expectedForgotPasswordLinkText);
-
+//FAİLED VERDİ SONUCU NEDEN KAYNAKLANDIGINI BULMAK İÇİN BU ŞEKİLDE YAZABİLİRSİN
             System.out.println("Forgot password link verification FAILED!!!");
         }
 
