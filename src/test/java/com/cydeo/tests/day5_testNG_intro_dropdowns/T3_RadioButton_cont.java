@@ -21,7 +21,7 @@ public class T3_RadioButton_cont {
         driver.get("https://practice.cydeo.com/radio_buttons");
 
         //Locate name='sports' radio buttons and store them in a List of Web Element
-
+//LİST İÇİNE ALDI NAME İLE BAŞLAYAN
         clickAndVerifyRadioButton(driver, "sport", "hockey" );
 
         clickAndVerifyRadioButton(driver, "sport", "football");

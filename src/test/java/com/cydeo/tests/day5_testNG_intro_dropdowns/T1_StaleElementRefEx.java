@@ -37,7 +37,7 @@ public class T1_StaleElementRefEx {
         deleteButton.click();
 
         //6. Verify “Delete” button is NOT displayed after clicking.
-
+//RE LOCATİON YAPMADIK ÇÜNKÜ ELEMENT KOMPLE SAYFADAN SİLİNDİ (DELETE BUTTON) BU YÜZDEN TRY CATCH KULLANDIK
         try {
 
             System.out.println("deleteButton.isDisplayed() = " + deleteButton.isDisplayed());
