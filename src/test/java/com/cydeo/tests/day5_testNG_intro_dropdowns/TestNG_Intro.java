@@ -5,7 +5,7 @@ import org.testng.annotations.*;
 
 public class TestNG_Intro {
 
-    @Test (priority = 1)
+    @Test (priority = 1) // HANGİ TSTİN ÖNCED ÇALIŞTIRILACAĞINI PRİORİTY BELİRLER
     public void test1(){
         System.out.println("Test 1 is running...");
 
@@ -29,24 +29,26 @@ public class TestNG_Intro {
 
     }
 
-    @BeforeClass
+    @BeforeClass // BİR KERE (BİR KERE ÇALIŞIR DİKKAT BEFORE METOD İSE HER METOD DA ÇALIŞIR BİR KERE)
+    // BÜTÜN METODLARDAN ÖNCE ÇALIŞIR
     public void setupMethod(){
         System.out.println("-----> BeforeClass is running!");
 
     }
 
-    @AfterClass
+    @AfterClass // BİR KERE (BİR KERE ÇALIŞIR DİKKAT after METOD İSE HER METOD DA ÇALIŞIR BİR KERE)
+    // BÜTÜN METODLARDAN sonra ÇALIŞIR
     public void tearDownClass(){
         System.out.println("-----> AfterClass is running!");
 
     }
 
-    @BeforeMethod
+    @BeforeMethod //HER METODDAN ÖNCE ÇALIŞIR
     public void setUpMethod(){
         System.out.println("---> BeforeMethod is running!");
     }
 
-    @AfterMethod
+    @AfterMethod //HER METODDAN SONRA ÇALIŞIR
     public void tearDownMethod(){
         System.out.println("---> AfterMethod is running!");
     }

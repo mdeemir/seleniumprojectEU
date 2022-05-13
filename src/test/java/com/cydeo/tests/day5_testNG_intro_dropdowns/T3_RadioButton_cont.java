@@ -21,7 +21,7 @@ public class T3_RadioButton_cont {
         driver.get("https://practice.cydeo.com/radio_buttons");
 
         //Locate name='sports' radio buttons and store them in a List of Web Element
-//LİST İÇİNE ALDI NAME İLE BAŞLAYAN
+
         clickAndVerifyRadioButton(driver, "sport", "hockey" );
 
         clickAndVerifyRadioButton(driver, "sport", "football");
@@ -29,10 +29,10 @@ public class T3_RadioButton_cont {
         clickAndVerifyRadioButton(driver, "color", "yellow");
 
     }
-
+//KULLANABİLECEĞİMİZ BİR METOD OLUŞTURDUK.
     private static void clickAndVerifyRadioButton(WebDriver driver, String nameAttribute, String idValue){
         List<WebElement> radioButtons = driver.findElements(By.name(nameAttribute));
-
+//LİST İÇİNE ALDI NAME İLE BAŞLAYAN
         //Loop through the List of WebElement and select matching result "hockey"
         for (WebElement each : radioButtons) {
             String eachId = each.getAttribute("id");
