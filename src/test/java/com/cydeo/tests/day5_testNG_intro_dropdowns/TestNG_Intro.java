@@ -12,7 +12,7 @@ public class TestNG_Intro {
         //ASSERT EQUALS: compare 2 of the same things
         String actual = "apple";
         String expected = "apple";
-
+//aynı tipte değişken olacak
         Assert.assertEquals(actual, expected);
 
     }
@@ -24,7 +24,7 @@ public class TestNG_Intro {
         //AssertTrue
         String actual = "apple";
         String expected = "apple";
-
+//boolean değişken yazman gerekir true kullanırken
         Assert.assertTrue(actual.equals(expected), "your message will go here");
 
     }

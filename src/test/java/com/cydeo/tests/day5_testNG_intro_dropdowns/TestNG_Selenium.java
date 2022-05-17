@@ -11,7 +11,7 @@ import java.util.concurrent.TimeUnit;
 
 public class TestNG_Selenium {
 
-    WebDriver driver;
+    WebDriver driver; //BUNU  EN ÜSTE YAZDI BİR METOD İÇİNE YAZINCA DİĞERİNDE KULLANAMAZ
 
     @BeforeMethod
     public void setupMethod(){
