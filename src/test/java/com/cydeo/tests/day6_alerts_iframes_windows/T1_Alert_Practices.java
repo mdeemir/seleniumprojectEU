@@ -27,7 +27,7 @@ public class T1_Alert_Practices {
     }
 
     @Test
-    public void alert_test1() throws InterruptedException {
+    public void alert_test1() throws InterruptedException {//throws InterruptedException tread.sleep için eklendi kafa karışmasın
         //3. Click to “Click for JS Alert” button
         WebElement informationAlertButton = driver.findElement(By.xpath("//button[.='Click for JS Alert']"));
 
