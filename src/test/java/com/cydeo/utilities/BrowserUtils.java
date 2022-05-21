@@ -38,11 +38,12 @@ public class BrowserUtils {
 
         for (String each : allWindowsHandles) {
 
-            driver.switchTo().window(each);
+            driver.switchTo().window(each);//SAYFALARI YENİ TAB DA/WİNDOWDA AÇTI AMA EN SON HANGİSİNİ AÇTIYSA ORADA DURDU SELENİUM
 
             System.out.println("Current URL: " + driver.getCurrentUrl());
 
-            if (driver.getCurrentUrl().contains(expectedInUrl)){
+            if (driver.getCurrentUrl().contains(expectedInUrl)){//HANGİ SAYFAYI AÇMASINI İSTİYORSAK O SAYFAYI AÇIP ORADA DURSUN SELENİUM
+             //BURADA MESELA GOOGEL-ETSY-FACEBOOK AÇTI SONRA ETSY DE DURSUN İSTEDİK ESTY AÇIK SAYFA OLDU SELENİUM ONA ODAKLANDI
                 break;
             }
         }

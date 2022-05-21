@@ -26,7 +26,7 @@ public class T1_WindowHandling {
         //2. Go to: https://www.amazon.com
         driver.get("https://www.amazon.com");
 
-        //3. Copy-paste the lines from below into your class
+        //3. Copy-paste the lines from below into your class  CASTİNG YAPTIK JavascriptExecutor METODLARINI KULLANMAK İÇİN BUNU SONRA ÖĞRENECEZ
         ((JavascriptExecutor) driver).executeScript("window.open('https://google.com','_blank');");
         ((JavascriptExecutor) driver).executeScript("window.open('https://etsy.com','_blank');");
         ((JavascriptExecutor) driver).executeScript("window.open('https://facebook.com','_blank');");
@@ -34,6 +34,7 @@ public class T1_WindowHandling {
         //4. Create a logic to switch to the tab where Etsy.com is open
 
         BrowserUtils.switchWindowAndVerify(driver, "etsy", "Etsy");
+        //UTİLİTİES PACKAGE DA BROWSERUTİLS SINIFINDA METOD OLUŞTURDUK SONRA KULLANABİLELİM DİYE
     }
 }
 
