@@ -1,11 +1,4 @@
 package com.cydeo.utilities;
-/*
-HER UTİLİTY İÇİN OLMASI GEREKEN ÖZELLİKLERİ
-    REUSEBLİTY - TEKRAR KULLANABİLİRLİK
-
-
- */
-
 
 // TASK: NEW METHOD CREATION
 // Method name : getDriver
@@ -24,7 +17,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 public class WebDriverFactory {
 
     public static WebDriver getDriver(String browserType){
-//STATİC YATIK ÇÜNKÜ CLASS İSMİ LE ÇAĞIRABİLMEK İÇİN
+
         if (browserType.equalsIgnoreCase("chrome")){
 
             WebDriverManager.chromedriver().setup();

@@ -19,7 +19,7 @@ public class Task01 {
      /*
      2 ways of using webElelements : long way or lazy way
       */
-        HandleWait.staticWait(1);
+        HandleWait.staticWait(1); //EXCEPTİON VERMESİN TREAD SLEEP METOD DİYE KENDİMİZ BİR TRY CATH METOD OLUŞTURDUK HANDLEWAİT CALSSTA UTİLİTİES DE
         // we are using Thread.sleep in a more cleaner syntax
         WebElement forgotPasswordLink = driver.findElement(By.linkText("Forgot Password"));
         forgotPasswordLink.click();
@@ -33,7 +33,7 @@ public class Task01 {
 
 // verify that email is displayed in the input box
 
-    //   String actualEmail = emailBox.getText(); // let's see if it works?
+    //   String actualEmail = emailBox.getText(); // let's see if it works?  --- OLMADI GETTEXT TE DEĞİL VALUE DE BU YÜZDEN GET ATTRİBUTE METODU KULLANDIK
         // not in the text of the element, it is at the 'value' attribute of the webElement
        String actualEmail = emailBox.getAttribute("value"); // let's see if it works?
 

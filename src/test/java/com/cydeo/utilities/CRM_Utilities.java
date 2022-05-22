@@ -11,8 +11,6 @@ public class CRM_Utilities {
     This method will log in with helpdesk1@cybertekschool.com
      user when it is called
      */
-
-    //sadece username: "helpdesk1@cybertekschool.com" ve password:useruser için bi metod oluşturduk
     public static void crm_login(WebDriver driver){
         //3. Enter valid username
         WebElement inputUsername = driver.findElement(By.xpath("//input[@name='USER_LOGIN']"));
@@ -29,7 +27,7 @@ public class CRM_Utilities {
         WebElement loginButton = driver.findElement(By.xpath("//input[@value='Log In']"));
         loginButton.click();
     }
-// username ve password girişi sağlayan metod oluşturduk
+
     public static void crm_login(WebDriver driver, String username, String password){
         //3. Enter valid username
         WebElement inputUsername = driver.findElement(By.xpath("//input[@name='USER_LOGIN']"));

@@ -1,7 +1,7 @@
 package com.cydeo.utilities;
 
 /*
-In this class only general utility methods that are not related to some specific page.
+In this class only general utility methods that are NOT related to some specific page.
  */
 
 import org.openqa.selenium.WebDriver;
@@ -38,12 +38,11 @@ public class BrowserUtils {
 
         for (String each : allWindowsHandles) {
 
-            driver.switchTo().window(each);//SAYFALARI YENİ TAB DA/WİNDOWDA AÇTI AMA EN SON HANGİSİNİ AÇTIYSA ORADA DURDU SELENİUM
+            driver.switchTo().window(each);
 
             System.out.println("Current URL: " + driver.getCurrentUrl());
 
-            if (driver.getCurrentUrl().contains(expectedInUrl)){//HANGİ SAYFAYI AÇMASINI İSTİYORSAK O SAYFAYI AÇIP ORADA DURSUN SELENİUM
-             //BURADA MESELA GOOGEL-ETSY-FACEBOOK AÇTI SONRA ETSY DE DURSUN İSTEDİK ESTY AÇIK SAYFA OLDU SELENİUM ONA ODAKLANDI
+            if (driver.getCurrentUrl().contains(expectedInUrl)){
                 break;
             }
         }
