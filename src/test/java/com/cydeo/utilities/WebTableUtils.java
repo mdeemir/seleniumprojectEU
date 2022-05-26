@@ -16,7 +16,9 @@ public class WebTableUtils {
     //as a String.
 
     public static String returnOrderDate(WebDriver driver, String customerName){
-       String locator = "//td[.='"+customerName+"']/following-sibling::td[3]";
+
+        //kodu dinamik hale getirdik. İSME DEĞİŞKEN ATADIK
+        String locator = "//td[.='"+customerName+"']/following-sibling::td[3]";  //LOCATOR ASLINDA STRİNF FİND KUTUSU İÇİNE YAZIYORUZ. FİND ELEMENT ORDAN GELİYOR HERHALDE
        WebElement customerDateCell = driver.findElement(By.xpath(locator));
        return customerDateCell.getText();
     }

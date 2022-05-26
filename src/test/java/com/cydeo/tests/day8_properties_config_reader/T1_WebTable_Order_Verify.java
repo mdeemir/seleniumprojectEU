@@ -31,8 +31,9 @@ public class T1_WebTable_Order_Verify {
         //Locate the cell that has Bob Martin text in it.
         WebElement bobMartinCell =
                 driver.findElement(By.xpath("//table[@id='ctl00_MainContent_orderGrid']//td[.='Bob Martin']"));
-
-        //System.out.println("bobMartinCell.getText() = " + bobMartinCell.getText());
+//      "//td[.='Bob Martin']" ----> BÖYLE DE BULUR
+        //System.out.println("bobMartinCell.getText() = " + bobMartinCell.getText());  GET TEXT OLMAZSA HÜCRENİN AYRINTILARINI GETİRİYOR.
+        //GETTEXT İSE SADECE METİN VERİSİNİ GETİRİR.
 
         //2. Verify Bob’s name is listed as expected.
         //Expected: “Bob Martin”
