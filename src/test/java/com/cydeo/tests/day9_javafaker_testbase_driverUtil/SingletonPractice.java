@@ -18,7 +18,7 @@ public class SingletonPractice {
 
     }
 
-    @Test (priority = 1)
+    @Test (priority = 1) //ÖNCE BU TEST YAPILACAK STR 4 ATANACAK SONRA STR1-2-3 E ATANMAYACAK
     public void singleton_understanding_test2(){
         String str4 = Singleton.getWord();
         System.out.println("str4 = " + str4);

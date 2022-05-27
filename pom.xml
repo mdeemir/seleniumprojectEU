@@ -43,6 +43,7 @@
             <version>7.5</version>
             <scope>test</scope>
         </dependency>
+
         <dependency>
             <groupId>com.github.javafaker</groupId>
             <artifactId>javafaker</artifactId>

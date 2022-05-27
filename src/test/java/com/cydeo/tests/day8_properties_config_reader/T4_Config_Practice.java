@@ -26,11 +26,12 @@ public class T4_Config_Practice {
 
     @Test
     public void google_search_test(){
-        //Driver.getDriver() --> driver
+        //Driver.getDriver() --> DRIVER UTILITY CLASS TAN GELİYOR. YUKARIDAKİ ADIMLARI KISALTTI BİZE
 
         Driver.getDriver().get("https://www.google.com");
 
         //3- Write “apple” in search box
+        // Driver.getDriver() ÇAĞIRDIGIMIZDA NULL DEĞİL ARTIK     return driver;     DRIVER UTILITY CLASS TAN METODA BAK
         WebElement googleSearchBox = Driver.getDriver().findElement(By.xpath("//input[@name='q']"));
 
         googleSearchBox.sendKeys(ConfigurationReader.getProperty("searchValue") + Keys.ENTER);
