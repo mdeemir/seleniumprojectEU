@@ -18,32 +18,35 @@ public class T1_Registration_Form {
         Driver.getDriver().get(ConfigurationReader.getProperty("registration.form.url"));
 
         //Create JavaFaker object
-        Faker faker = new Faker();
+        Faker faker = new Faker();//rastgele veri oluşturmak için
 
         //3. Enter first name
         //WebElement inputFirstName = driver.findElement(By.xpath("//input[@name='firstname']"));
         WebElement inputFirstName = Driver.getDriver().findElement(By.xpath("//input[@name='firstname']"));
-        String fakerFirstName = faker.name().firstName();
-        inputFirstName.sendKeys(fakerFirstName);
+        // //input[@name  turuncuya döndü screenshotta var settings-plugin-selenium ui yükledik
+        //Driver.getDriver()--> bunu kullancan artık sana driver ı getirecek
+        String fakerFirstName = faker.name().firstName();//BÖYLE DE YAZABİLİRSİN faker.name().firstName() BU STRİNG DÖNDÜRÜR
+        inputFirstName.sendKeys(fakerFirstName);//() PARANTEZ İÇİNE STRİNG YAZMALISIN
 
         //4. Enter last name
         WebElement inputLastName = Driver.getDriver().findElement(By.xpath("//input[@name='lastname']"));
+        //CTRL+D KOPYAŞA VE CTRL+D İLE AĞAŞI TAŞI NAME İ DEĞİŞTİR KISAYOL
         inputLastName.sendKeys(faker.name().lastName());
 
         //5. Enter username
-        //inputUsername.sendKeys(faker.name().username().replaceAll(".", ""));
+        //inputUsername.sendKeys(faker.name().username().replaceAll(".", ""));---> RASTGELE DATADA . VARSA "" İLE DEĞİŞTİR
         WebElement inputUsername = Driver.getDriver().findElement(By.xpath("//input[@name='username']"));
 
-        String user = faker.bothify("helpdesk###");
+        String user = faker.bothify("helpdesk###");//### DEĞİŞTİRECEK HERSEFERİNDE DEĞİŞTİRECEK
         inputUsername.sendKeys(user);
 
         //6. Enter email address
         WebElement inputEmail = Driver.getDriver().findElement(By.xpath("//input[@name='email']"));
-        inputEmail.sendKeys(user + "@email.com");
+        inputEmail.sendKeys(user + "@email.com");//RATGELE OLUŞTURDUĞUMUZ helpdesk###@EMAİL.COM YAPTIK
 
         //7. Enter password
         WebElement inputPassword = Driver.getDriver().findElement(By.xpath("//input[@name='password']"));
-        inputPassword.sendKeys(faker.numerify("########"));
+        inputPassword.sendKeys(faker.numerify("########"));//8 KARAKTERLİ RASTGELE ŞİFRE OLUŞTURDU
         //System.out.println("faker.internet().password() = " + faker.internet().password());
 
         //8. Enter phone number
@@ -52,16 +55,17 @@ public class T1_Registration_Form {
 
         //9. Select a gender from radio buttons
         WebElement inputGender = Driver.getDriver().findElement(By.xpath("//input[@value='female']"));
-        inputGender.click();
+        inputGender.click();//kadın seceneğini seçip tıkladık
 
         //10.Enter date of birth
         WebElement inputBirthday = Driver.getDriver().findElement(By.xpath("//input[@name='birthday']"));
-        //faker.number().numberBetween(2004, 1920)
+        //faker.number().numberBetween(2004, 1920)--> FAKER DA BELLİ SAYI ARASINDA SAYI ÜRETİR.
         inputBirthday.sendKeys("03/08/2000");
 
         //11.Select Department/Office
         Select departmentDropdown = new Select(Driver.getDriver().findElement(By.xpath("//select[@name='department']")));
         departmentDropdown.selectByIndex(faker.number().numberBetween(1,9));
+        // DROPDOWN ALTINDAKİ ECENEKLERDEN HERHANGİ BİRİNİ SECECEK HER ZAMAN. 9 SECENEK VAR İNDEX NO 1-9 ARASI (SIFIR VAR AMA ONA GEREK YOKTU)
         //break until 1.05pm cst
 
         //12.Select Job Title

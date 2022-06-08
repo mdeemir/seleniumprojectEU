@@ -14,14 +14,14 @@ public class T6_JavascriptExecutor {
         //2- Go to: https://practice.cydeo.com/infinite_scroll
         Driver.getDriver().get("https://practice.cydeo.com/infinite_scroll");
 
-        //((JavascriptExecutor)Driver.getDriver()).executeScript("");
+        //((JavascriptExecutor)Driver.getDriver()).executeScript("");  ---> bu şekilde de doğrudan java script metodlarına ulaşabilirsin
 
         //3- Use below JavaScript method and scroll
         JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
-
+//cast yaptık . screenhotta imlplement extends görüntüü var selenium un
         //a. 750 pixels down 10 times.
         for (int i = 0; i < 10; i++) {
-            BrowserUtils.sleep(1);
+           BrowserUtils.sleep(1);
             js.executeScript("window.scrollBy(0,750)");
         }
 
@@ -30,6 +30,9 @@ public class T6_JavascriptExecutor {
         for (int i = 0; i < 10; i++) {
             BrowserUtils.sleep(1);
             js.executeScript("window.scrollBy(0,-750)");
+            /* (+ veya -) olması x y grafiği sağ sol veya aşağı yukarı hareket.,
+             ilki sağ sol, ikincirakam yukarı aşağı. y de + aşağı - yukarı, x de +sağa - sola
+             */
         }
 
         //JavaScript method to use : window.scrollBy(0,0)
