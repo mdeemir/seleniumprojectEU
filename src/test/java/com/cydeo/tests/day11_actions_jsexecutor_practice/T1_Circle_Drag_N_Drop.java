@@ -24,12 +24,12 @@ public class T1_Circle_Drag_N_Drop {
 
         //2. Drag and drop the small circle to bigger circle.
         Actions actions = new Actions(Driver.getDriver());
-        //actions.dragAndDrop(smallCircle, bigCircle).perform();
-        actions.clickAndHold(smallCircle)
+        //actions.dragAndDrop(smallCircle, bigCircle).perform();---> BU ŞEKİLDE HIZLI GERÇEKLEŞİR İŞLEM
+        actions.clickAndHold(smallCircle)//KÜÇÜK ÇEMBERİ TUTTU
                 .pause(2000)
-                .moveToElement(bigCircle)
+                .moveToElement(bigCircle)//BÜYÜK ÇEMBERE HAREKET ETTİRDİ
                 .pause(2000)
-                .release()
+                .release()//SERBEST BIRAKIR TUTTUĞUNU
                 .perform();
 
         //3. Assert:

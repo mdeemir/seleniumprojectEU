@@ -25,7 +25,11 @@ public class T7_Scroll_JSExecutor {
         //3- Scroll down to “Cydeo” link
         BrowserUtils.sleep(2);
         js.executeScript("arguments[0].scrollIntoView(true)", cydeoLink);
+        /* arguments[0].scrollIntoView(true) BU KOD JAVASCRİPTİN 0  cydeoLink İŞARET EDİYOR İLK İNDEX NO cydeoLink,HOMElİNK YAZDIĞINDA
+        [1] HOMELİNK OLUR. KODUN ANLAMI 0 İNDEX NODAKİ CYDEO LİNKİNİ GÖRENE KADAR İLERLE DEMEK. DERS NOTUNDA AYRINTISI YAZIYOR
+        * */
 
+  //BİR SATIRI AŞAĞI YUKARI HAREKET ETTİRMEK İÇİN CTRL+SHİFT YUKARI AŞAĞI
         //4- Scroll up to “Home” link
         BrowserUtils.sleep(2);
         //js.executeScript("arguments[1].scrollIntoView(true)", cydeoLink, homeLink);

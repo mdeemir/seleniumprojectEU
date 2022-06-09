@@ -20,6 +20,7 @@ public class ActionsPractices {
         //3- Scroll down to “Powered by CYDEO”
         //Create object of Actions and pass our "driver" instance
         Actions actions = new Actions(Driver.getDriver());
+        //COSTRUCTOR İÇİNE DİRVER GİRİYORUZ
 
         //Locating cydeo link to be able to pass in the actions method
         //a[@href='https://cydeo.com/']
