@@ -11,6 +11,8 @@ public class LibraryLoginPage {
     public LibraryLoginPage(){
         /*initElements method will create connection in between the current
         driver session (instance) and the object of the current class.
+
+        ÖNEMLİ KISMI BU PAGEFACTORY
          */
         PageFactory.initElements(Driver.getDriver(), this);
     }

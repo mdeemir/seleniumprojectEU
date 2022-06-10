@@ -14,6 +14,9 @@ public class POMPractices {
     public void setupMethod(){
         Driver.getDriver().get("https://library1.cydeo.com/");
         libraryLoginPage = new LibraryLoginPage();
+        /* ÖNEMLİ OBJECTİ YUKARDA OLUŞTURMADIK. YUKARIDA YAZMADIK LibraryLoginPage libraryLoginPage=new LibraryLoginPage();
+           HER TESTTEN ÖNCE OLUŞTURULMASI İÇİN BEFORE METOD İÇİNNE YAZDIK. ÇÜNKÜ  Driver.closeDriver(); İLE TESTLERİ KAPATTIK
+            HER TESTTE SESSİON ID YARATMIŞ OLUYOR*/
     }
 
     @Test

@@ -19,10 +19,11 @@ public class WebDriveWaitPractices {
 
         //creating the wait object to be able to create certain condition to wait
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 10);
+        //10 SANİYE İÇİNDE OLMAZSA TİMEOUTEXCEPTİON MÜLAKATLARDA GELEBİİR EN SIK KLLANDIĞIMIZ TİMEOUT EXCEPTİON
 
         //use the "wait" object to create our expected condition
-        wait.until(ExpectedConditions.titleIs("Dynamic title"));
-
+        wait.until(ExpectedConditions.titleIs("Dynamic title"));//KOŞULUN 10 SANİYE İÇİNDE OLMASINI BEKLE
+            //wait.until(ExpectedConditions.titleIs  BU KISMI METODDAN GELİYOR KÜTÜPHANEDE BİNLERDE ÇEŞİT VAR.
         //Create object of DynamicLoad7Page to reach and assert web elements
         DynamicLoad7Page dynamicLoad7Page = new DynamicLoad7Page();
 
@@ -47,7 +48,7 @@ public class WebDriveWaitPractices {
 
         //3. Wait until loading bar disappears
         wait.until(ExpectedConditions.invisibilityOf(dynamicLoad1Page.loadingBar));
-
+//invisibilityOf(dynamicLoad1Page.loadingBar)    GÖRÜNMEYENE KADAR BEKLE. VEYA SONRAKİ ADIM GÖRÜNENE KADAR DA YAZABİLİRSİN
         //4. Assert username inputbox is displayed
         Assert.assertTrue(dynamicLoad1Page.inputUsername.isDisplayed());
 
