@@ -10,7 +10,7 @@ public class DynamicControlsPage {
     public DynamicControlsPage(){
         PageFactory.initElements(Driver.getDriver(), this);
     }
-
+// BU ÖRNEKTE LOCATOR OLARAK CSS KULLANDI HOCA
     //@FindBy(xpath = "//button[.='Remove']
     @FindBy(css = "form#checkbox-example > button")
     public WebElement removeButton;

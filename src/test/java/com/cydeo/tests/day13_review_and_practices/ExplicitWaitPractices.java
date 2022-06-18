@@ -33,13 +33,15 @@ public class ExplicitWaitPractices {
 //        wait.until(ExpectedConditions.invisibilityOf(dynamicControlsPage.loadingBar));
 
         BrowserUtils.waitForInvisibilityOf(dynamicControlsPage.loadingBar);
+        //browserutils classtan metod oluşturduk oran cağırdık
 
         //5- Verify:
         //a. Checkbox is not displayed
-
+//check box kayboluyor ve nosuch elemnet exceptionu alıyorduk. check boxun görülüp görülmediğini test ediyoruz ama check box  web sayfasından siliniyor
         try {
             //assertFalse method will pass the test if the boolean value returned is: false
             Driver.getDriver().manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+            //driver classta implicitlywait 10 du. bunu nesne oluşturmadan önce kapattık. implicitly ve explicit iberaber kullanmak driverda sorun yaratabilir
             Assert.assertTrue(!dynamicControlsPage.checkbox.isDisplayed());
             Assert.assertFalse(dynamicControlsPage.checkbox.isDisplayed());
         }catch (NoSuchElementException n){
